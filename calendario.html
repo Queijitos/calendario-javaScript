@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="css.css" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: chocolate;">
+    <div class="temido">
+    <table class="calendar" id="calendar">
+      <thead>
+        <tr>
+          <th style="background-color: rgb(226, 143, 143);">Dom</th>
+          <th>Seg</th>
+          <th>Ter</th>
+          <th>Qua</th>
+          <th>Qui</th>
+          <th>Sex</th>
+          <th>Sab</th>
+          <th style="background-color: rgb(226, 143, 143);">Dom</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="background-color: rgb(226, 143, 143);"></td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td style="background-color: rgb(226, 143, 143);">5</td>
+        </tr>
+        <tr>
+          <td style="background-color: rgb(226, 143, 143);">6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td style="background-color: rgb(226, 143, 143);">13</td>
+        </tr>
+        <tr>
+          <td style="background-color: rgb(226, 143, 143);">14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td style="background-color: rgb(226, 143, 143);">21</td>
+        </tr>
+        <tr>
+          <td style="background-color: rgb(226, 143, 143);">22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td style="background-color: rgb(226, 143, 143);">29</td>
+        </tr>
+        <tr>
+          <td style="background-color: rgb(226, 143, 143);">30</td>
+          <td>31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td style="background-color: rgb(226, 143, 143);"></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <hr/>
+  </div>
+    <div class="colores">
+    <label for="color">Escolha uma cor:</label>
+    <select id="color" name="color"> 
+        <option id="azul" value="lightblue" >Azul</option>
+        <option id="Verde" value="PaleGreen">Verde</option>
+        <option id="Rosa" value="LightPink">Rosa</option>
+        <option id="Roxo" value="SlateBlue">Roxo</option>
+    </select>
+    <label for="day">Escolha o dia:</label>
+    <input type="number" id="day" name="day" min="1" max="31">
+    <input type="submit" onclick="colorirDia()">
+  </div>
+   
+    <style>
+
+      #fotos-e-texto {
+        display: none;
+      }
+    </style>
+    </head>
+    <body>
+    
+    <button id="botao-mostrar-esconder" onclick="mostrarEsconder()" style="position: relative; right: -11%; box-sizing: content-box;">Mostrar Fotos e Texto</button>
+    <div id="fotos-e-texto">
+      <!-- Fotos -->
+      <h1 style="text-align: center;">Caminhões</h1>
+      <script> 
+        var win = null;
+        function NovaJanela(pagina,nome,w,h,scroll){
+        LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+        TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+        settings = 'location=no,toolbar=no,directories=no,status=no,height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable';
+        win = window.open(pagina,nome,settings);
+        }
+    </script>
+      <a href="caminhaoAzul.html" onclick="NovaJanela(this.href,'nomeJanela','820','560','yes');return false"> <img src="fotos/azul.png" class="caminhao" id="caminhão1" alt="Foto 1" ></a> 
+     <a href="caminhãoverde.html" onclick="NovaJanela(this.href,'nomeJanela','820','560','yes');return false"><img src="fotos/verde.png" class="caminhao" id="caminhão2" alt="Foto 2"></a>
+     <a href="caminhãorosa.html" onclick="NovaJanela(this.href,'nomeJanela','820','560','yes');return false"> <img src="fotos/rosa.png" class="caminhao" id="caminhão3" alt="Foto 3"></a>
+     <a href="caminhãoroxo.html" onclick="NovaJanela(this.href,'nomeJanela','820','560','yes');return false"> <img src="fotos/roxo.png" class="caminhao" id="caminhão4" alt="Foto 4"></a>
+ <!--- <table class="arrumar" style="position: relative; left: 15%; top: px;">
+  <tr>
+    <th>Dia</th>
+    <th><input type="number"></th>
+  </tr>
+</table>
+<table style="position: relative; left: 37%; top: -20px;">
+  <tr>
+    <th>Dia</th>
+    <th><input type="number"></th>
+  </tr>
+</table>
+<table style="position: relative; left: 57%; top: -55px;">
+  <tr>
+    <th>Dia</th>
+    <th><input type="number"></th>
+  </tr>
+</table>
+<table style="position: relative; left: 75%; top: -90px;">
+  <tr>
+    <th>Dia</th>
+    <th><input type="number"></th>
+  </tr>
+</table>--->
+
+
+<input type="text" id="textoInput" placeholder="Digite algo...">
+<button onclick="transferirTexto()">Transferir</button>
+
+<div id="textoDestino"></div>
+
+<script>
+function transferirTexto() {
+    var texto = document.getElementById("textoInput").value; // Obter o texto do input
+    document.getElementById("textoDestino").innerText = texto; // Definir o texto no local de destino
+}
+</script>
+
+</body>
+</html>
+
+
+
+      
+    
+      <!-- Texto -->
+      <p><b>Somente 3 Fretes por mes e por caminhão</b></p>
+    </div>
+
+   
+    
+ 
+</body>
+</html>

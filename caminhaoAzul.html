@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CAMINHÃO AZUL</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='java.js'></script>
+</head>
+<body>
+    
+<title>Move e Inverte Imagem em Tempo Real</title>
+<style>
+    #imagem {
+        position: absolute;
+    }
+</style>
+</head>
+<body>
+
+<img src="fotos/azul.png" id="imagem" alt="Imagem">
+
+<script>
+    var imagem = document.getElementById("imagem");
+    var posX = 0;
+    var posY = 0;
+    var velocidadeX = 1; // Velocidade horizontal
+    var velocidadeY = 0; // Velocidade vertical
+    var invertidoX = false; // Flag para controlar a inversão horizontal
+    var invertidoY = false; // Flag para controlar a inversão vertical
+
+    function moverImagem() {
+        // Atualiza a posição horizontal
+        posX += velocidadeX;
+        // Verifica se atingiu a borda direita ou esquerda da janela
+        if (posX >= window.innerWidth - imagem.width || posX <= 0) {
+            velocidadeX = -velocidadeX; // Inverte a direção
+            invertidoX = !invertidoX; // Inverte o estado de invertidoX
+            if (invertidoX) {
+                imagem.style.transform = "scaleX()"; // Inverte a imagem horizontalmente
+            } else {
+                imagem.style.transform = "scaleX()"; // Retorna a imagem à orientação original
+            }
+        }
+
+        // Atualiza a posição vertical
+        posY += velocidadeY;
+        // Verifica se atingiu a borda inferior ou superior da janela
+        if (posY >= window.innerHeight - imagem.height || posY <= 0) {
+            velocidadeY = -velocidadeY; // Inverte a direção
+            invertidoY = !invertidoY; // Inverte o estado de invertidoY
+            if (invertidoY) {
+                imagem.style.transform = "scaleY(1)"; // Inverte a imagem verticalmente
+            } else {
+                imagem.style.transform = "scaleY(1)"; // Retorna a imagem à orientação original
+            }
+        }
+
+        // Define a nova posição da imagem
+        imagem.style.left = posX + "px";
+        imagem.style.top = posY + "px";
+
+        // Chama a função novamente para continuar o movimento em tempo real
+        requestAnimationFrame(moverImagem);
+    }
+
+    // Inicia o movimento da imagem
+    moverImagem();
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th style="text-align: center; position: relative; left: 30%;">Dias</th>
+        </tr>
+    </thead>
+    
+    <tr>
+        <th>frete</th>
+        <td>Dia 3</td>
+        <td>Dia 25</td>
+        <script>
+            document.getElementById("textoDestino").innerText = texto;
+        </script>
+    </tr>
+</table>
+<style>
+    table{
+        border-style: solid;
+        position: relative;
+        left: 45%;
+    }
+</style>
+<script>
+    window.onload = function() {
+        var textoTransferido = localStorage.getItem("textoTransferido"); // Obter o texto do localStorage
+        if (textoTransferido) {
+            document.getElementById("textoDestino").innerText = textoTransferido; // Exibir o texto no local de destino
+            localStorage.removeItem("textoTransferido"); // Remover o texto do localStorage após exibição
+        } else {
+            document.getElementById("textoDestino").innerText = "Nenhum texto transferido."; // Exibir mensagem padrão se nenhum texto foi transferido
+        }
+    }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

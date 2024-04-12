@@ -1,0 +1,106 @@
+.calendar {
+    margin:  auto; 
+    width: 21%; 
+    font-size: 18px; 
+    left: 2%;
+    position: relative;
+    top: 30px;
+    border-style: solid;
+  }td
+  {
+    position: relative;
+    left: 0%;
+    margin: auto;
+    border: 10cap;
+background-color: rgb(221, 221, 221);
+  }
+  .azul{
+background-color: aliceblue;
+  }
+  th{
+background-color: rgb(122, 150, 173);
+  }
+  
+  #botao-mostrar-esconder {
+    background-color: #4d83bd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    top: 111px;
+  }
+
+  #botao-mostrar-esconder:hover {
+    background-color: #0056b3;
+  }
+  .calendar:hover {
+    background-color: rgb(86, 87, 88)
+  }
+  th:hover {
+    background-color: azure;
+  }
+td:hover{
+  background-color: azure;
+}
+table{
+  border-style: solid;
+}
+.colores{
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.temido{
+  background-color: chocolate;
+}
+#caminhão1:hover {
+  background-color: lightblue;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#caminhão2:hover {
+  background-color:  green;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+#caminhão3:hover {
+  background-color:lightpink;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#caminhão4:hover {
+ background-color: slateblue;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.caminhao{
+  width: auto;
+  height: auto;
+  margin-top: 10%;
+  padding: 2%;
+  position: relative;
+  right: -0%;
+
+}
+#arrumar{
+  align-items: center;
+  background-attachment: fixed;
+}
+
+  
+ 
+  
+  
+
+
